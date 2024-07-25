@@ -4,6 +4,7 @@ import (
 	"github.com/reiver/go-chain10"
 	"github.com/reiver/go-chaincode"
 	"github.com/reiver/go-chainname"
+	"github.com/reiver/go-ethaddr"
 	"github.com/reiver/go-opt"
 )
 
@@ -99,4 +100,8 @@ func (receiver Client) ChainName() string {
 // See https://chainlist.org/ for the list of chain-ids.
 func (receiver Client) ChainID() uint64 {
 	return receiver.contract.ChainID
+}
+
+func (receiver Client) ContractAddress() ethaddr.Address {
+	return receiver.contract.Address
 }
