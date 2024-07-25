@@ -1,6 +1,7 @@
 package conclient
 
 import (
+	"github.com/ethereum/go-ethereum/accounts/abi"
 	"github.com/reiver/go-ethaddr"
 )
 
@@ -8,7 +9,8 @@ import (
 // on a particular blockchain-network (specified by its `ChainID`)
 // which was created at a particular block-number (specified by 'FromBlockNumber').
 type Contract struct {
-	ChainID         uint64
+	ABI             abi.ABI
 	Address         ethaddr.Address
+	ChainID         uint64
 	FromBlockNumber uint64
 }
