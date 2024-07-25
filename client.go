@@ -15,7 +15,7 @@ import (
 //	client := conclient.MakeClient(contract, rpcurl)
 type Client struct {
 	contract Contract
-	rpcurl                  opt.Optional[string]
+	rpcurl   opt.Optional[string]
 }
 
 // MakeClient makes a conclient.Client for contract 'Contract' using RPC-URL 'rpcurl'.
