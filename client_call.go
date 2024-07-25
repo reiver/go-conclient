@@ -12,7 +12,7 @@ import (
 )
 
 // Call calls the 'methodname' method on the contract, and returns the results.
-func (receiver Client) URI(methodname string, parameters ...interface{}) ([]interface{}, error) {
+func (receiver Client) Call(methodname string, parameters ...interface{}) ([]interface{}, error) {
 	var contractAddress ethcommon.Address
 	{
 		var something bool
